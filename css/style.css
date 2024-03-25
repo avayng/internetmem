@@ -1,0 +1,108 @@
+/* @font-face {
+  font-family:Pixelify Sans;
+  src: url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+} */
+
+html { 
+    background-color:#2356AD;
+    cursor: url("../img/cursor.png"), auto;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.star {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 400px;
+}
+
+.marquee {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 225px;
+  background-color: white;
+}
+
+
+#container {
+  gap: 5px ;
+  /* margin: 900px; */
+  display: flex;
+  justify-content: center;
+  /* grid-template-areas: 
+  
+  "p p p p s s o o"
+  "p p p p s s o o"
+  "p p p p s s o o"
+
+  ; */
+}
+
+.doll {
+  width: 300px;
+}
+
+#paper-column {
+  width: 875px;
+  height: 1200px;
+}
+
+#column-two {
+  width: 415px;
+  height: 1200px;
+  background-color: white;
+}
+
+#column-three {
+  width:415px;
+  height: 1200px;
+  background-color: #FFB8FF;
+}
+
+.draggable-box {
+  position: absolute;
+}
+
+.icons {
+  width: 120px;
+  display: flex;
+  gap: 25px 20px;
+  row-gap: 25px;
+  column-gap: 20px;
+
+}
+
+#button{
+  padding: 25px;
+  position: sticky;
+  margin-bottom: 40px;
+  margin-left: 600px;
+  margin-top: 1500px;
+  color:white; 
+  font-size: 30px;
+  border-radius: 10px;
+  font-weight:bold;
+  background-color:deeppink;
+  height: 80px;
+  width: 180px;
+}
+
+#freeform{
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* by default, all the clothes are hidden when 
+the page loads */
+.clothing-container {
+  display: none;
+}
+
+#text-entry-box {
+  width: 50%;
+  margin: auto;  
+}

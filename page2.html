@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>page2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+
+    <a href="index.html"><img id="star" src="img/Star 1.png" alt="drawing of star"></a>
+    <script src="js/drag-and-drop.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <img id="paper-column" src="img/paper 1.jpg">
+        <div id="column-two">
+
+            <div id="doll-container">
+                <img class="draggable-box doll" draggable="true" src="img/1doll.png" alt="drawing of doll">
+                <img class="draggable-box doll" draggable="true" src="img/2doll.png" alt="drawing of doll">
+                <img class="draggable-box doll" draggable="true" src="img/3doll.png" alt="drawing of doll">
+            </div>
+
+            <div class="clothing-container" id="pants-container">
+                <img class="draggable-box" draggable="true" src="img/clothes/pants1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/pants2.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/shorts1.png">
+            </div>
+
+            <div class="clothing-container" id="skirt-container">
+                <img class="draggable-box" draggable="true" src="img/clothes/skirt1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/skirt2.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/dress1.png">
+            </div>
+
+            <div class="clothing-container" id="tanktop-container">
+                <img class="draggable-box" draggable="true" src="img/clothes/tanktop1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/tanktop2.png">
+            </div>
+
+            <div class="clothing-container" id="tshirt-container">
+                <img class="draggable-box" draggable="true" src="img/clothes/tshirt1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/tshirt2.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/tshirt3.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/tshirt4.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/tshirt5.png">
+            </div>
+
+            <div class="clothing-container" id="shoe-container">
+                <!-- shoe images go in here with same format as above -->
+
+            </div>
+
+        </div>
+
+
+        <div id="column-three">
+
+            <a href="#pants-container"><img class="icons" src="img/pants.svg"></a>
+            <a href="#tshirt-container"><img class="icons" src="img/tshirts.svg"></a>
+            <a href="#tanktop-container"><img class="icons" src="img/tanktop.svg"></a>
+            <a href="#skirt-container"><img class="icons" src="img/skirts.svg"></a>
+            <a href="#shoe-container"><img class="icons" src="img/shoes.svg"></a>
+            
+        </div>
+
+
+    </div>
+
+
+
+
+    <a href="page3.html">
+        <button id="button"> click ! </button>
+
+
+    </a>
+
+    <script>
+        // the following code uses the link of the anchor tag around the icons in the HTML
+        // to trigger the corresponding DIV container to switch its display property
+        // from none to block
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("a[href^='#']").forEach(function (anchor) {
+                anchor.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent default anchor behavior
+
+                    // Get the target element ID from the href attribute
+                    var targetID = this.getAttribute("href").substring(1);
+                    var targetElement = document.getElementById(targetID);
+
+                    if (targetElement) {
+                        // Toggle the display property of the target element
+                        targetElement.style.display = (targetElement.style.display === "block") ? "none" : "block";
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+
+        // the following script adds an automatic offset so that the clothing items
+        // are spaced out vertically in the second column.
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const containers = document.querySelectorAll('.clothing-container');
+
+            containers.forEach(function (container) {
+                const images = container.querySelectorAll('img');
+                const pageHeight = window.innerHeight;
+                const topOffset = 0.50 * pageHeight; // the images start 50% down from the top of the page, so they show up in the column
+
+                images.forEach(function (img, index) {
+                    const totalOffset = index * 150 + topOffset; // Adjust the multiplier as needed to change spacing of clothes
+                    img.style.top = `${totalOffset}px`;
+                });
+            });
+        });
+
+
+    </script>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
