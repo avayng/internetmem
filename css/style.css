@@ -7,6 +7,7 @@ html {
     background-color:#2356AD;
     cursor: url("../img/cursor.png"), auto;
     font-family: "Pixelify Sans", sans-serif;
+    color:#FFB8FF;
 }
 
 .star {
@@ -103,7 +104,8 @@ the page loads */
 
 #text-entry-box {
   width: 90%;
-  margin: auto;  
+  margin: auto;
+  margin-left: 100px;
 }
 
 #back {
@@ -118,7 +120,13 @@ the page loads */
 }
 
 .star2 {
-  position: sticky;
+  position: static;
   margin-top: 50px;
   margin-left: 50px;
+}
+
+#space {
+  position: relative;
+  margin-top:400px;
+  margin-left: 600px;
 }
