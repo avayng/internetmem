@@ -14,14 +14,16 @@ html {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 400px;
+  margin-top: 150px;
 }
 
 .marquee {
   display: block;
   margin: auto;
   margin-top: 225px;
- background-color: white;
+  
+  background-size: contain;
+ 
 }
 
 

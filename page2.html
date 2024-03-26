@@ -33,12 +33,15 @@
                 <img class="draggable-box" draggable="true" src="img/clothes/pants1.png">
                 <img class="draggable-box" draggable="true" src="img/clothes/pants2.png">
                 <img class="draggable-box" draggable="true" src="img/clothes/shorts1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/shorts2.png">
+
             </div>
 
             <div class="clothing-container" id="skirt-container">
                 <img class="draggable-box" draggable="true" src="img/clothes/skirt1.png">
                 <img class="draggable-box" draggable="true" src="img/clothes/skirt2.png">
                 <img class="draggable-box" draggable="true" src="img/clothes/dress1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/dress2.png">
             </div>
 
             <div class="clothing-container" id="tanktop-container">
@@ -52,10 +55,13 @@
                 <img class="draggable-box" draggable="true" src="img/clothes/tshirt3.png">
                 <img class="draggable-box" draggable="true" src="img/clothes/tshirt4.png">
                 <img class="draggable-box" draggable="true" src="img/clothes/tshirt5.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/tshirt6.png">
             </div>
 
             <div class="clothing-container" id="shoe-container">
                 <img class="draggable-box" draggable="true" src="img/clothes/shoes1.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/shoes2.png">
+                <img class="draggable-box" draggable="true" src="img/clothes/shoes3.png">
 
 
 
@@ -122,10 +128,10 @@
             containers.forEach(function (container) {
                 const images = container.querySelectorAll('img');
                 const pageHeight = window.innerHeight;
-                const topOffset = 0.50 * pageHeight; // the images start 50% down from the top of the page, so they show up in the column
+                const topOffset = 0.40 * pageHeight; // the images start 50% down from the top of the page, so they show up in the column
 
                 images.forEach(function (img, index) {
-                    const totalOffset = index * 150 + topOffset; // Adjust the multiplier as needed to change spacing of clothes
+                    const totalOffset = index * 120 + topOffset; // Adjust the multiplier as needed to change spacing of clothes
                     img.style.top = `${totalOffset}px`;
                 });
             });
