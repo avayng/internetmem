@@ -75,9 +75,9 @@ html {
 
 #button{
   padding: 25px;
-  position: sticky;
-  margin-bottom: 40px;
-  margin-left: 600px;
+  position: relative;
+  margin-bottom: 200px;
+  margin-left: 150px;
   margin-top: 1500px;
   color:white; 
   font-size: 30px;
@@ -103,6 +103,23 @@ the page loads */
 }
 
 #text-entry-box {
-  width: 50%;
+  width: 90%;
   margin: auto;  
+}
+
+#back {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#animated { 
+  position: sticky;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+.star2 {
+  position: sticky;
+  margin-top: 50px;
+  margin-left: 50px;
 }
